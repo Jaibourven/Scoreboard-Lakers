@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Basketball Score Counter</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     <div class="container">
@@ -40,8 +40,9 @@
     <div class="game-controls">
       <p>Quarter: <span id="quarter">1</span></p>
       <button onclick="nextQuarter()">Next Quarter</button>
-      <br><br>
+      <br /><br />
       <button onclick="newGame()">New Game</button>
+      <button id="undo_btn" onclick="undo()">undo last</button>
     </div>
 
     <script src="index.js"></script>
