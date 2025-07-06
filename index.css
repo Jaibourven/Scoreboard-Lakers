@@ -1,0 +1,127 @@
+/* Lakers Color Theme */
+:root {
+  --lakers-purple: #552583;
+  --lakers-gold: #FDB927;
+  --lakers-white: #FFFFFF;
+  --lakers-black: #000000;
+}
+
+/* Basic page styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--lakers-black);
+  color: var(--lakers-white);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container for the two scoreboards */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  gap: 50px;
+}
+
+/* Scoreboard styling */
+.scoreboard {
+  width: 300px;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  border: 5px solid var(--lakers-gold);
+  background: var(--lakers-purple);
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.scoreboard:hover {
+  transform: scale(1.05);
+}
+
+/* Title for each team */
+h3 {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--lakers-gold);
+  transition: color 0.3s ease;
+}
+
+/* Score display */
+.score {
+  font-size: 60px;
+  font-weight: bold;
+  color: var(--lakers-white);
+  margin: 10px 0;
+}
+
+/* Button styling */
+button {
+  background-color: var(--lakers-gold);
+  color: var(--lakers-purple);
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--lakers-white);
+  color: var(--lakers-purple);
+}
+
+/* Game Controls */
+.game-controls {
+  margin-top: 30px;
+  background: var(--lakers-purple);
+  padding: 20px;
+  border-radius: 10px;
+  width: 60%;
+  margin: 30px auto;
+  border: 3px solid var(--lakers-gold);
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3);
+}
+
+/* Quarter display */
+.game-controls p {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--lakers-gold);
+  margin-bottom: 10px;
+}
+
+/* Highlight the leading team */
+.leader {
+  background: var(--lakers-gold);
+  color: var(--lakers-purple);
+  border-color: var(--lakers-white);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.5);
+}
+
+/* Ensure text remains visible when highlighted */
+.leader h3 {
+  color: var(--lakers-purple); /* Change text color to purple */
+}
+
+.leader .score {
+  color: var(--lakers-purple); /* Make the score visible */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .game-controls {
+    width: 80%;
+  }
+}

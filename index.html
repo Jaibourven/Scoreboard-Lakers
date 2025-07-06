@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Basketball Score Counter</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <div class="container">
+      <!-- Home Section -->
+      <div class="scoreboard" id="home-board">
+        <h3>LA Lakers</h3>
+        <p id="home-score" class="score">0</p>
+        <div class="buttons">
+          <button onclick="updateHome(1)">+1</button>
+          <button onclick="updateHome(2)">+2</button>
+          <button onclick="updateHome(3)">+3</button>
+        </div>
+        <!-- Extra counter: fouls -->
+        <p>Fouls: <span id="home-fouls">0</span></p>
+        <button onclick="updateHomeFouls(1)">Add Foul</button>
+      </div>
+
+      <!-- Guest Section -->
+      <div class="scoreboard" id="guest-board">
+        <h3>GUEST</h3>
+        <p id="guest-score" class="score">0</p>
+        <div class="buttons">
+          <button onclick="updateGuest(1)">+1</button>
+          <button onclick="updateGuest(2)">+2</button>
+          <button onclick="updateGuest(3)">+3</button>
+        </div>
+        <!-- Extra counter: fouls -->
+        <p>Fouls: <span id="guest-fouls">0</span></p>
+        <button onclick="updateGuestFouls(1)">Add Foul</button>
+      </div>
+    </div>
+
+    <!-- Game Controls -->
+    <div class="game-controls">
+      <p>Quarter: <span id="quarter">1</span></p>
+      <button onclick="nextQuarter()">Next Quarter</button>
+      <br><br>
+      <button onclick="newGame()">New Game</button>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
